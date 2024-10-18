@@ -1,27 +1,19 @@
 package torneoFutbol;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
-public class Partido {
-    private LocalDate fecha;            
+
+public class Partido {       
     private String local;
     private String visitante;
     private int goles_local;
     private int goles_visitante;
     
     
-    public Partido(LocalDate fecha, String local, String visitante, int goles_local, int goles_visitante) {
-        this.fecha = fecha;
+    public Partido(String local, String visitante, int goles_local, int goles_visitante) {
         this.local = local;
         this.visitante = visitante;
         this.goles_local = goles_local;
         this.goles_visitante = goles_visitante;
-    }
-
-
-    public LocalDate fechaPartido() {
-        return (LocalDate)(fecha);
     }
 
 
@@ -45,14 +37,20 @@ public class Partido {
     }
 
     @Override
-    public String toString() {
-        DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String salida = "Fecha: " + fechaPartido().format(formatoFecha) + " | ";
-        salida +=  "(L) "+equipoLocal() + " " + golesEquipoLocal() + " - ";
-        salida +=  "(V) "+equipoVisitante() + " " + golesEquipoVisitante() + " | ";
+    public String toString(){
+        String salida =  equipoLocal() + " " + golesEquipoLocal() + " - ";
+        salida +=  equipoVisitante() + " " + golesEquipoVisitante();
         return salida;
-
     }
 
+   public String resultadoPartido(){
+        String resultado = "Empate";
+        if (goles_local > goles_visitante){
+            resultado = local;
+        }else if(goles_local < goles_visitante){
+            resultado = visitante;
+        }
+        return resultado;
+   }
     
 }

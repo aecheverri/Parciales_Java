@@ -12,7 +12,7 @@ public class Equipo {
         this.cantidadFans = numeroFans;
     }
 
-    private void validarEquipo(String nombreEquipo, int numeroFans){
+  /*   private void validarEquipo(String nombreEquipo, int numeroFans){
    
         
         if(nombreEquipo.equals("")){
@@ -27,7 +27,7 @@ public class Equipo {
 
         
 
-    }
+    }*/
 
     public String verNombre() {
         return nombre;
