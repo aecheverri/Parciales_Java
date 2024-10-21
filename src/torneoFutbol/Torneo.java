@@ -21,7 +21,6 @@ public class Torneo {
 
     public void cargarEquipo(String nombre, int cantidadFanaticos){
         Equipo nuevo = new Equipo(nombre, cantidadFanaticos);
-        // revisar que no está ingresado
         equipos.add(nuevo);
     }
 
@@ -216,10 +215,3 @@ public class Torneo {
         }
     }
 }
-
-
-
-
-
-    
-

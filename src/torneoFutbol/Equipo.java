@@ -12,23 +12,6 @@ public class Equipo {
         this.cantidadFans = numeroFans;
     }
 
-  /*   private void validarEquipo(String nombreEquipo, int numeroFans){
-   
-        
-        if(nombreEquipo.equals("")){
-            throw new EquipoVacioException("El nombre del equipo no puede ser vacío.");
-        }
-
-    
-
-        if(numeroFans <= 0){
-            throw new IllegalArgumentException("La cantidad de fanáticos debe ser un entero superior a 0.");
-        }
-
-        
-
-    }*/
-
     public String verNombre() {
         return nombre;
     }
