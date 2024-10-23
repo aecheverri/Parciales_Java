@@ -59,7 +59,7 @@ public class Hotel {
         System.out.println("* Habitaciones disponibles entre " + fechaInicial +" y "+  fechaFinal);
         for (Habitacion h: habitaciones){
             if (estaDisponible(h, fechaInicial, fechaFinal))
-                System.out.println("  - " + h);
+                System.out.println(" "+h);
 
         }
     }

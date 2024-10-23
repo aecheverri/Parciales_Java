@@ -9,7 +9,7 @@ public class Cliente {
 
 
     public Cliente(Cliente cliente) {
-        this.nombre = new String(cliente.nombre);
+        this.nombre = cliente.nombre;
     }
 
     public void setNombre(String nombre) {
