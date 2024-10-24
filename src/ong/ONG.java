@@ -77,7 +77,14 @@ public class ONG {
     }
 
     public void mostrarDonaciones() {
+
+        //ordena de menor a mayor según fecha de donacion
         donaciones.sort((d1, d2) -> d1.compareTo(d2));
+
+        //ordena de mayor a menor según fecha de donacion
+        //donaciones.sort((d2, d1) -> d1.compareTo(d2));
+        
+
         System.out.println("Listado de donaciones de " + nombre);
         
         for(Donacion d : donaciones){
@@ -121,7 +128,7 @@ public class ONG {
 
             }
         }
-        
+
         System.out.println(" - Cobradas: " + cantidad_cobradas);
         System.out.println(" - Rechazadas: " + cantidad_rechazadas);
         System.out.println(" - Pendientes: " + cantidad_pendientes);
