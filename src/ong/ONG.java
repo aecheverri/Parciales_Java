@@ -121,9 +121,11 @@ public class ONG {
 
             }
         }
+        
         System.out.println(" - Cobradas: " + cantidad_cobradas);
         System.out.println(" - Rechazadas: " + cantidad_rechazadas);
         System.out.println(" - Pendientes: " + cantidad_pendientes);
+        
         if (cantidad_cobradas > 0){
             float montoMedio = total_recaudado / cantidad_cobradas;
             System.out.println(" - Monto Total: $ " + total_recaudado);
